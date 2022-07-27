@@ -8,11 +8,6 @@ def base():
     return render_template("index.html")
 
 
-@app.route("/index")
-def index():
-    return redirect("/", code=302)
-
-
 @app.route("/projects")
 def projects():
     return render_template("projects.html")
