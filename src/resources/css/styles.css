@@ -1,4 +1,4 @@
-/* This CSS is used for global styling. */
+/* This CSS file is used for global styling. */
 
 @font-face {
     font-family: "Open Sans";
@@ -8,12 +8,9 @@
 
 body {
     background-color: #292A2F;
+    color: #DDDDDD;
     font-family: "Open Sans", Helvetica, sans-serif;
     margin: 0px;
-}
-
-h1 {
-    padding-left: 20px;
 }
 
 .navbar {

@@ -4,13 +4,13 @@ app = Flask(__name__, static_folder="resources", template_folder="pages")
 
 
 @app.route("/")
-def home():
-    return redirect("/index")
+def base():
+    return render_template("index.html")
 
 
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    return redirect("/", code=302)
 
 
 @app.route("/projects")
