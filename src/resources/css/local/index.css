@@ -1,1 +1,52 @@
 /* This CSS file is used for styling the index page. */
+
+.info-divider {
+    background-color: #B2B2B2;
+    border: none;
+    height: 25px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    width: 1px;
+}
+
+#website-opening {
+    text-align: center;
+}
+
+#my-name {
+    background-color: #161619;
+    border-radius: 15px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 600px;
+}
+
+#my-info {
+    background-color: #161619;
+    border-radius: 15px;
+    height: 60px;
+    line-height: 29px;
+    margin: 0 auto;
+    width: 450px;
+}
+
+#social-box {
+    align-items: center;
+    background-color: #161619;
+    border-radius: 20px;
+    display: flex;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+}
+
+#social-divider {
+    background-color: #B2B2B2;
+    border: none;
+    height: 280px;
+    width: 1px;
+}
