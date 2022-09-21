@@ -1,52 +1,29 @@
 /* This CSS file is used for styling the index page. */
 
-.info-divider {
-    background-color: #B2B2B2;
-    border: none;
-    height: 25px;
-    margin: 0 auto;
-    margin-bottom: 4px;
-    margin-top: 4px;
-    width: 1px;
-}
-
-#website-opening {
-    text-align: center;
-}
-
-#my-name {
-    background-color: #161619;
-    border-radius: 15px;
-    height: 50px;
-    line-height: 50px;
-    margin: 0 auto;
-    margin-top: 25px;
-    width: 600px;
-}
-
-#my-info {
-    background-color: #161619;
-    border-radius: 15px;
-    height: 60px;
-    line-height: 29px;
-    margin: 0 auto;
-    width: 450px;
-}
-
-#social-box {
-    align-items: center;
-    background-color: #161619;
-    border-radius: 20px;
+.name-writer h1 {
+    animation: 
+        typing 2s steps(40, end),
+        blinking-caret .75s step-end infinite;
+    border-image: linear-gradient(to top, white 50%, transparent 50%);
+    border-image-slice: 1;
+    border-right: 2px solid white;
     display: flex;
-    height: 300px;
+    font-size: 36px;
+    height: 50px;
+    letter-spacing: .15em;
     margin: 0 auto;
-    text-align: center;
-    width: 500px;
+    overflow: hidden;
+    padding-top: 50px;
+    white-space: nowrap;
+    width: 593px;
 }
 
-#social-divider {
-    background-color: #B2B2B2;
-    border: none;
-    height: 280px;
-    width: 1px;
+@keyframes typing {
+    from {width: 0}
+    to {width: 593px}
+}
+
+@keyframes blinking-caret {
+    from, to {border-image: transparent}
+    50% {border-image: linear-gradient(to top, white 50%, transparent 50%)}
 }
