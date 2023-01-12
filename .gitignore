@@ -53,3 +53,6 @@ venv/
 
 # VSCode
 .vscode/
+
+# Specific Files
+src/static/css/gen/

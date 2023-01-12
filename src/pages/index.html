@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/local/index.css') }}" />
+    {% assets "typing" %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gen/typing.css') }}" />
+    {% endassets %}
+
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 </head>
 
 <body>
@@ -22,7 +27,7 @@
 
     <div class="main-wrapper">
         <div class="name-writer">
-            <h1>$ssh baronkobama@0.0.0.0</h1>
+            <h1><span class="ssh"></span></h1>
         </div>
     </div>
 </body>

@@ -1,0 +1,21 @@
+/* This SCSS file is used in making the typing effect on the index page. */
+
+@import 'typed';
+
+.ssh {
+    @include typed(
+        "ssh baronkobama@127.0.0.17", // the string to be written
+        null, // the speed (null equates to 1, the default speed)
+        (
+            name: "ssh-typewriter",
+            caret: true,
+            caret-color: #FFFFFF,
+            caret-space: 2px,
+            caret-speed: 1,
+            caret-width: 2px, 
+            delay: 0.5,
+            iterations: 0, // we only want to type the string once
+            prefix: "vm@ubuntu:~$ ",
+        )
+    );
+}
