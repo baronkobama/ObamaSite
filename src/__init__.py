@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, Response
 from flask_assets import Bundle, Environment
 
 app = Flask(__name__, static_folder="static", template_folder="pages")
@@ -13,20 +13,31 @@ env.register(bundles)
 
 
 @app.route("/")
-def index():
+def root() -> str:
     return render_template("index.html")
 
 
+@app.route("/index")
+def index() -> Response:
+    return redirect("/", code=302)
+
+
 @app.route("/projects")
-def projects():
+def projects() -> str:
     return render_template("projects.html")
 
 
 @app.route("/github")
-def github():
+def github() -> Response:
     return redirect("https://github.com/baronkobama", code=302)
 
 
 @app.route("/discord")
-def discord():
+def discord() -> Response:
     return redirect("https://discord.com/users/335241734088949760", code=302)
+
+
+@app.after_request
+def remove_header(response: Response) -> Response:
+    response.headers.remove("ETag")
+    return response
