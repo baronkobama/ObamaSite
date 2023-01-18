@@ -13,17 +13,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/gen/typing.css') }}" />
     {% endassets %}
 
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/extern/jquery.js') }}"></script>
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li>baronkobama's website</li>
-            <li><a class="navbar-active" href="/">Home</a></li>
-            <li><a href="projects">Projects</a></li>
-        </ul>
-    </div>
+    <div id="navbar"></div>
+
+    <script> 
+        $(function() { 
+            $("#navbar").load("{{ url_for('static', filename='templates/navbar.html') }}", function() {
+                $('a').each(function() {
+                    if ($(this).prop('href') == window.location.href) $(this).addClass('active');
+                });
+            });
+        }); 
+    </script>
 
     <div class="main-wrapper">
         <div class="name-writer">
