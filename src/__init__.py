@@ -17,11 +17,6 @@ def root() -> str:
     return render_template("index.html")
 
 
-@app.route("/index")
-def index() -> Response:
-    return redirect("/", code=302)
-
-
 @app.route("/projects")
 def projects() -> str:
     return render_template("projects.html")
