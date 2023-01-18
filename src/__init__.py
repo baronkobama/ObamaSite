@@ -5,7 +5,7 @@ app = Flask(__name__, static_folder="static", template_folder="pages")
 env = Environment(app)
 
 bundles = {
-    "typed": Bundle('scss/typed.scss', filters='scss', output='css/gen/typed.css'),  # typed library
+    "typed": Bundle('scss/extern/typed.scss', filters='scss', output='css/gen/typed.css'),  # typed library
     "typing": Bundle('scss/typing.scss', filters='scss', output='css/gen/typing.css'),  # utilizing typed
 }
 
