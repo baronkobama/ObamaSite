@@ -56,3 +56,4 @@ venv/
 
 # Specific Files
 src/static/css/gen/
+/.env
